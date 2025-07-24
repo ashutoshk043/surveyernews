@@ -1,0 +1,17 @@
+{
+    "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "./dist/server",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "lib": ["ES2022", "dom"]
+  },
+  "files": [
+    "server.ts"
+  ],
+  "angularCompilerOptions": {
+    "entryModule": "./src/app/app.server.module#AppServerModule"
+  }
+}

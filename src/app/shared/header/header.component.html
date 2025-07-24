@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header-container">
+    <a routerLink="/" class="logo" aria-label="Homepage">YourLogo</a>
+
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <button
+        class="mobile-menu-btn"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen"
+        [class.active]="isMenuOpen"
+        aria-label="Toggle menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav" [class.open]="isMenuOpen">
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li><a routerLink="/privacy-policy" routerLinkActive="active">Privacy Policy</a></li>
+        <li><a routerLink="/surveys" routerLinkActive="active">Surveys</a></li>
+        <li><a routerLink="/terms" routerLinkActive="active">Terms</a></li>
+        <li><a routerLink="/web-stories" routerLinkActive="active">Web Stories</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

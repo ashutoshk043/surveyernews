@@ -50,7 +50,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "1mb"
                 }
               ],
               "outputHashing": "all"
@@ -75,6 +75,27 @@
           },
           "defaultConfiguration": "development"
         },
+"server": {
+  "builder": "@angular-devkit/build-angular:server",
+  "options": {
+    "outputPath": "dist/surveynews",
+    "main": "server.ts",
+    "tsConfig": "tsconfig.server.json"
+  },
+  "configurations": {
+    "production": {
+      "outputHashing": "media",
+      "sourceMap": false,
+      "optimization": true
+    },
+    "development": {
+      "outputHashing": "none",
+      "sourceMap": true,
+      "optimization": false
+    }
+  },
+  "defaultConfiguration": "production"
+},
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -102,5 +123,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
