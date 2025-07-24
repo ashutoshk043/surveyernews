@@ -78,7 +78,7 @@
 "server": {
   "builder": "@angular-devkit/build-angular:server",
   "options": {
-    "outputPath": "dist/surveynews",
+    "outputPath": "dist/surveynews-server",
     "main": "server.ts",
     "tsConfig": "tsconfig.server.json"
   },
