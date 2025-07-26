@@ -1,1 +1,160 @@
-<p>contact works!</p>
+  <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Contact Us</h1>
+                <p class="hero-subtitle">Get in touch with our editorial team. We'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <section class="contact-info-section">
+                <h2 class="section-title">Contact Information</h2>
+                
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <div class="contact-details">
+                        <div class="contact-label">General Inquiries</div>
+                        <div class="contact-value"><a href="mailto:contact@surveynews.in">contactsurveynews.in</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.25 2.1l-.02.02-.03.03L12 4.85 9.8 2.18c-.02-.01-.03-.02-.05-.03L7.5 2.1c-.27.04-.53.18-.71.41L5.69 4.2c-.19.24-.25.57-.15.86l1.32 3.77L4.2 10.51c-.24.18-.38.44-.41.71l-.05 2.25c.03.27.17.53.41.71l2.66 1.68-1.32 3.77c-.1.29-.04.62.15.86l1.1 1.69c.18.23.44.37.71.41l2.25.05c.27-.03.53-.17.71-.41L12 19.15l2.2 2.67c.18.24.44.38.71.41l2.25-.05c.27-.04.53-.18.71-.41l1.1-1.69c.19-.24.25-.57.15-.86l-1.32-3.77 2.66-1.68c.24-.18.38-.44.41-.71l.05-2.25c-.03-.27-.17-.53-.41-.71l-2.66-1.68 1.32-3.77c.1-.29.04-.62-.15-.86l-1.1-1.69c-.18-.23-.44-.37-.71-.41l-2.25-.05z"/>
+                    </svg>
+                    <div class="contact-details">
+                        <div class="contact-label">Editorial Team</div>
+                        <div class="contact-value"><a href="mailto:editorial@surveynews.in">editorialsurveynews.in</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <div class="contact-details">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">New Delhi, India</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89L8.78 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                    </svg>
+                    <div class="contact-details">
+                        <div class="contact-label">Response Time</div>
+                        <div class="contact-value">We typically respond within 24-48 hours</div>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="office-hours">
+                    <h3>Editorial Hours</h3>
+                    <ul class="hours-list">
+                        <li><span class="day">Monday - Friday</span> <span class="time">9:00 AM - 6:00 PM</span></li>
+                        <li><span class="day">Saturday</span> <span class="time">10:00 AM - 4:00 PM</span></li>
+                        <li><span class="day">Sunday</span> <span class="time">Closed</span></li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">All times are in Indian Standard Time (UTC+5:30)</p>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <h2 class="section-title">Send us a Message</h2>
+                
+                <div class="success-message" id="successMessage">
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    Sorry, there was an error sending your message. Please try again.
+                </div>
+                
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required 
+                               placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required 
+                               placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="tip">News Tip</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="press">Press Inquiry</option>
+                            <option value="technical">Technical Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="organization">Organization (Optional)</label>
+                        <input type="text" id="organization" name="organization" class="form-input" 
+                               placeholder="Your company or organization">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required 
+                                  placeholder="Please provide details about your inquiry. If you're sharing a news tip, include relevant sources and context."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" id="newsletter" name="newsletter" style="margin-right: 8px;">
+                            Subscribe to our newsletter for survey news updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Quick Contact Options -->
+        <section class="quick-contact">
+            <h2 class="section-title">Quick Contact Options</h2>
+            <div class="quick-contact-grid">
+                <div class="quick-contact-item">
+                    <div class="quick-icon">📰</div>
+                    <div class="quick-title">News Tips</div>
+                    <div class="quick-desc">Have a survey story? Share it with our editorial team</div>
+                </div>
+                <div class="quick-contact-item">
+                    <div class="quick-icon">💬</div>
+                    <div class="quick-title">Feedback</div>
+                    <div class="quick-desc">Help us improve with your suggestions and comments</div>
+                </div>
+                <div class="quick-contact-item">
+                    <div class="quick-icon">🤝</div>
+                    <div class="quick-title">Partnerships</div>
+                    <div class="quick-desc">Explore collaboration opportunities with our team</div>
+                </div>
+                <div class="quick-contact-item">
+                    <div class="quick-icon">🔧</div>
+                    <div class="quick-title">Technical Support</div>
+                    <div class="quick-desc">Report website issues or technical problems</div>
+                </div>
+            </div>
+        </section>
+    </main>

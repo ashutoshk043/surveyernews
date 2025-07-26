@@ -31,6 +31,24 @@
   text-decoration: none;
 }
 
+.logo img {
+  max-width: 100%;
+  height: 50px;
+  display: block;
+  width: 150px; /* Optional base width; will scale down on smaller screens */
+}
+@media (min-width: 768px) {
+  .logo img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo img {
+    width: 250px;
+  }
+}
+
 .logo:hover {
   color: #1d4ed8;
 }

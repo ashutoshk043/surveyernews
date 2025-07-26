@@ -9,7 +9,7 @@ import { WebStoriesComponent } from './pages/web-stories/web-stories.component';
 
 export const routes: Routes = [
       { path: '', component: HomeComponent },
-  { path: 'web-stories', component: WebStoriesComponent },
+  { path: 'stories', component: WebStoriesComponent },
   { path: 'surveys', component: SurveysComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
